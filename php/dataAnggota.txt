@@ -1,0 +1,1 @@
+a:4:{i:0;a:2:{s:4:"nama";s:4:"Toni";s:9:"gol_darah";s:1:"B";}i:1;a:2:{s:4:"nama";s:5:"Oriza";s:9:"gol_darah";s:1:"O";}i:2;a:2:{s:4:"nama";s:6:"Palupi";s:9:"gol_darah";s:1:"B";}i:3;a:2:{s:4:"nama";s:6:"Kresna";s:9:"gol_darah";s:2:"AB";}}
