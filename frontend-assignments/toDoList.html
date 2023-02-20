@@ -10,23 +10,18 @@
 </head>
 <body>
     <div id="todolist-container">
-        <h1>Aplikasi Todo List</h1>
+        <h1>Aplikasi Todo&nbsp;List</h1>
         <form>
-            <input id="todolist-input" type="text" name="todo" placeholder="Tambahkan todo baru..."><button id="btn-addtodo" type="submit" aria-label="tambah todo"><i class="fas fa-plus" aria-hidden="true"></i></button>
+            <input id="todolist-input" type="text" name="todo" placeholder="Tambahkan todo baru..."><button id="btn-addtodo" type="button" aria-label="tambah todo"><i class="fas fa-plus" aria-hidden="true"></i></button>
         </form>
         <ul id="todo-entry-container">
-            <li class="todo-entry">
-                <p class="todo-text">Belajar JavaScript</p>
-                <div class="todo-slide">
-                    <button class="btn-edittodo" aria-label="edit"><i class="fas fa-pen" aria-hidden="true"></i></button>
-                    <button class="btn-deletetodo" aria-label="delete"><i class="fas fa-trash" aria-hidden="true"></i></button>
-                </div>
-            </li>
+            <!-- todo-entries are inserted by script-->
         </ul>
         <div class="todo-credit">
             <p>Ini adalah <a href="https://todolist.nuraskiah.xyz/" target="_blank" rel="noreferrer"><strong>tugas&nbsp;latihan</strong></a> bersama Codepolitan.</p>
             <a href="#" class="btn-link">GitHub</a>
         </div>
     </div>
+    <script src="./toDoList.js"></script>
 </body>
 </html>
