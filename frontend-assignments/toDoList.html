@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List App</title>
+    <link rel="stylesheet" href="./toDoList.css">
+    <script src="https://kit.fontawesome.com/334ab0ff25.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="todolist-container">
+        <h1>Aplikasi Todo List</h1>
+        <form>
+            <input id="todolist-input" type="text" name="todo" placeholder="Tambahkan todo baru..."><button id="btn-addtodo" type="submit" aria-label="tambah todo"><i class="fas fa-plus" aria-hidden="true"></i></button>
+        </form>
+        <ul id="todo-entry-container">
+            <li class="todo-entry">
+                <p class="todo-text">Belajar JavaScript</p>
+                <div class="todo-slide">
+                    <button class="btn-edittodo" aria-label="edit"><i class="fas fa-pen" aria-hidden="true"></i></button>
+                    <button class="btn-deletetodo" aria-label="delete"><i class="fas fa-trash" aria-hidden="true"></i></button>
+                </div>
+            </li>
+        </ul>
+        <div class="todo-credit">
+            <p>Ini adalah <a href="https://todolist.nuraskiah.xyz/" target="_blank" rel="noreferrer"><strong>tugas&nbsp;latihan</strong></a> bersama Codepolitan.</p>
+            <a href="#" class="btn-link">GitHub</a>
+        </div>
+    </div>
+</body>
+</html>
