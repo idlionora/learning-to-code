@@ -154,6 +154,10 @@ button.active:hover {
     width: 45px;
 }
 
+.todo-slide.show {
+    transform: translateX(0);
+}
+
 .btn-edittodo {
     background-color: #e7cd3c;
 }
@@ -185,6 +189,10 @@ button.active:hover {
 
 .hide {
     display: none;
+}
+
+.strike {
+    text-decoration: line-through;
 }
 
 @media (min-width: 576px) {
