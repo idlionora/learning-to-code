@@ -6,6 +6,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Belajar Tailwind</title>
 		<link rel="stylesheet" href="style.css" />
+		<style>
+			.section-gradient {
+				background-image: linear-gradient(to bottom right, #4c51bf, #702459);
+			}
+		</style>
 	</head>
 	<body>
 		<section class="w-screen mx-auto px-4">
@@ -18,7 +23,10 @@
 					/>
 				</div>
 				<div class="block lg:hidden">
-					<a href="#" class="flex items-center px-3 py-2 rounded border border-indigo-400 text-indigo-500 hover:text-indigo-700 hover:border-indigo-700">
+					<a
+						href="#"
+						class="flex items-center px-3 py-2 rounded border border-indigo-400 text-indigo-500 hover:text-indigo-700 hover:border-indigo-700"
+					>
 						<svg
 							class="fill-current h-3 w-3"
 							viewBox="0 0 20 20"
@@ -63,19 +71,28 @@
 			</nav>
 		</section>
 		<section id="about" class="w-screen mx-auto py-4 bg-indigo-700 section-gradient">
-            <div class="px-16 py-8">
-                <h1 class="w-full text-5xl font-bold text-center text-white">About Me</h1>
-                <div class="mb-4">
-                    <div class="bg-pink-500 w-2/3 md:w-1/6 opacity-75 rounded h-1 mx-auto"></div>
-                </div>
-                <h2 class="text-3xl font-bold mb-2 text-white text-center">Hai, Saya Nurul. Senang berjumpa dengan Anda.</h2>
-                <h3 class="text-lg mb-2 text-white text-center">Saya seorang front-end developer. Saya membuat tampilan website dan aplikasi dengan bahasa pemrograman, sesuai dengan kebutuhan user.</h3>
-                <div class="w-full">
-                    <div class="px-4 py-4">
-                        <img src="../src/assets/profilepic.jpg" class="shadow-lg rounded-full max-w-full mx-auto text-center w-48" alt="Foto Profil">
-                    </div>
-                </div>
-            </div>
+			<div class="px-16 py-8 text-white">
+				<h1 class="w-full text-5xl font-bold text-center">About Me</h1>
+				<div class="mb-4">
+					<div class="bg-pink-500 w-2/3 md:w-1/6 opacity-75 rounded h-1 mx-auto"></div>
+				</div>
+				<h2 class="text-3xl font-bold mb-2 text-center">
+					Hai, Saya Nurul. Senang berjumpa dengan Anda.
+				</h2>
+				<h3 class="text-lg mb-2 text-white text-center">
+					Saya seorang front-end developer. Saya membuat tampilan website dan aplikasi
+					dengan bahasa pemrograman, sesuai dengan kebutuhan user.
+				</h3>
+				<div class="w-full">
+					<div class="px-4 py-4">
+						<img
+							src="../src/assets/profilepic.jpg"
+							class="shadow-lg rounded-full max-w-full mx-auto text-center w-48"
+							alt="Foto Profil"
+						/>
+					</div>
+				</div>
+			</div>
 		</section>
 		<section id="skill" class="w-screen mx-auto py-4 bg-white h-32">Framework Skill</section>
 		<section
