@@ -25,9 +25,11 @@ function showTodoList() {
 	todoListContainer.innerHTML = todoEntries;
 
 	todoNodes = document.querySelectorAll('.todo-entry');
-	todoNodes.forEach((todo, todoIndex) =>
-		todo.addEventListener('click', () => strikeText(todoIndex))
-	);
+	todoNodes.forEach((todo, todoIndex) => {
+		todo.addEventListener('click', () => slideTodoButtons(todoIndex));
+		todo.children[0].addEventListener('click', (e) => {strikeText(todoIndex); e.stopPropagation()});
+		todo.children[1].addEventListener('click', (e) => e.stopPropagation());	
+	});
 }
 
 function addTodo() {
@@ -37,13 +39,25 @@ function addTodo() {
 	showTodoList();
 }
 
-function strikeText(index) {
+function slideTodoButtons(index) {
 	//early return to troubleshoot todoNodes[index] undefined after deleting todo entry
 	if (!todoNodes[index]) {
 		return;
 	}
+	const todoButtons = todoNodes[index].children[1];
+
+	if (todoButtons.classList.contains('show')) {
+		todoButtons.classList.remove('show');
+	} else {
+		todoButtons.classList.add('show');
+	}
+}
+
+function strikeText(index) {
+	if (!todoNodes[index]) {
+		return;
+	}
 	const todoText = todoNodes[index].children[0];
-	const todoSlide = todoNodes[index].children[1];
 
 	if (!todoText.classList.contains('strike')) {
 		todoText.classList.add('strike');
@@ -51,11 +65,7 @@ function strikeText(index) {
 		return;
 	}
 
-	if (todoSlide.classList.contains('show')) {
-		todoSlide.classList.remove('show');
-	} else {
-		todoSlide.classList.add('show');
-	}
+	slideTodoButtons(index)
 }
 
 function editTodo(index) {
