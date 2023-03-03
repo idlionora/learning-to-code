@@ -1,5 +1,5 @@
 const todoList = ['Belajar HTML', 'Belajar JavaScript'];
-
+const todoForm = document.getElementById('todo-form');
 const todoInput = document.getElementById('todolist-input');
 const addTodoBtn = document.getElementById('btn-addtodo');
 const cancelEditBtn = document.getElementById('btn-edit-cancel');
@@ -15,7 +15,7 @@ function showTodoList() {
 		todoEntries += `
         <li class="todo-entry">
             <p class="todo-text ${strikedNodes.includes(index) ? 'strike' : ''}">${todo}</p>
-            <div class="todo-slide">
+            <div class="todo-buttons">
                 <button class="btn-edittodo" aria-label="edit" onclick="editTodo(${index})"><i class="fas fa-pen" aria-hidden="true"></i></button>
                 <button class="btn-deletetodo" aria-label="delete" onclick="deleteTodo(${index})"><i class="fas fa-trash" aria-hidden="true"></i></button>
             </div>
@@ -27,8 +27,11 @@ function showTodoList() {
 	todoNodes = document.querySelectorAll('.todo-entry');
 	todoNodes.forEach((todo, todoIndex) => {
 		todo.addEventListener('click', () => slideTodoButtons(todoIndex));
-		todo.children[0].addEventListener('click', (e) => {strikeText(todoIndex); e.stopPropagation()});
-		todo.children[1].addEventListener('click', (e) => e.stopPropagation());	
+		todo.children[0].addEventListener('click', (e) => {
+			strikeText(todoIndex);
+			e.stopPropagation();
+		});
+		todo.children[1].addEventListener('click', (e) => e.stopPropagation());
 	});
 }
 
@@ -65,7 +68,7 @@ function strikeText(index) {
 		return;
 	}
 
-	slideTodoButtons(index)
+	slideTodoButtons(index);
 }
 
 function editTodo(index) {
@@ -86,16 +89,30 @@ function cancelEdit() {
 
 function confirmEdit() {
 	const index = selectedTodoIndex;
-	todoList[index] = todoInput.value;
-	strikedNodes.splice(strikedNodes.indexOf(index), 1);
-	cancelEdit();
-	showTodoList();
+	if (todoInput.value.trim().length != 0) {
+		todoList[index] = todoInput.value;
+		strikedNodes.splice(strikedNodes.indexOf(index), 1);
+		cancelEdit();
+		showTodoList();
+	} else {
+		todoInput.value = todoList[index];
+	}
 }
 
 function deleteTodo(index) {
 	todoList.splice(index, 1);
 	strikedNodes.splice(strikedNodes.indexOf(index), 1);
 	showTodoList();
+}
+
+function submitTodoForm() {
+	if (addTodoBtn.classList.contains('active') && !addTodoBtn.classList.contains('hide')) {
+		addTodo();
+	}
+
+	if (!confirmEditBtn.classList.contains('hide')) {
+		confirmEdit();
+	}
 }
 
 todoInput.addEventListener('keyup', (e) => {
@@ -106,7 +123,10 @@ todoInput.addEventListener('keyup', (e) => {
 		addTodoBtn.classList.remove('active');
 	}
 });
-
+todoForm.addEventListener('submit', (e) => {
+	e.preventDefault();
+	submitTodoForm();
+});
 addTodoBtn.addEventListener('click', addTodo);
 cancelEditBtn.addEventListener('click', cancelEdit);
 confirmEditBtn.addEventListener('click', confirmEdit);

@@ -136,7 +136,7 @@ button.active:hover {
     padding: 5px 15px;
 }
 
-.todo-slide {
+.todo-buttons {
     position: absolute;
     top: 0;
     right: 0;
@@ -146,15 +146,15 @@ button.active:hover {
     transition: all 0.3s ease;
 }
 
-.todo-entry:hover .todo-slide {
+.todo-entry:hover .todo-buttons {
     transform: translateX(0);
 }
 
-.todo-slide button {
+.todo-buttons button {
     width: 45px;
 }
 
-.todo-slide.show {
+.todo-buttons.show {
     transform: translateX(0);
 }
 
