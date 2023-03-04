@@ -14,6 +14,9 @@
 			.section-gradient {
 				background-image: linear-gradient(to bottom right, #4c51bf, #702459);
 			}
+			.gradient-skill {
+				background-image: linear-gradient(#fc8181, #fed7d7);
+			}
 		</style>
 	</head>
 	<body>
@@ -97,7 +100,9 @@
 					</div>
 				</div>
 			</div>
-			<div class="grid grid-cols-1 md:grid-cols-3 bg-white px-4 py-4 md:py-8 md:px-8 m-16 rounded-lg">
+			<div
+				class="grid grid-cols-1 md:grid-cols-3 bg-white px-4 py-4 md:py-8 md:px-8 m-16 rounded-lg"
+			>
 				<div class="max-w-sm shadow-lg px-4 py-4 m-3 text-center">
 					<i class="fas fa-laptop-code fa-5x text-blue-500 mb-6"></i>
 					<div class="p-4 text-gray-600">
@@ -113,7 +118,7 @@
 					</div>
 					<div class="px-2 py-4">
 						<button
-							class="bg-blue-500 md:bg-red-500 hover:bg-blue-700 text-white font-bold px-4 py-2 shadow-md rounded-tl-lg rounded-br-lg"
+							class="bg-blue-500 md:bg-red-400 hover:bg-blue-700 text-white font-bold px-4 py-2 shadow-md rounded-tl-lg rounded-br-lg"
 						>
 							Lihat Portofolio
 						</button>
@@ -134,7 +139,7 @@
 					</div>
 					<div class="px-2 py-4">
 						<button
-							class="bg-blue-500 md:bg-red-500 hover:bg-blue-700 text-white font-bold px-4 py-2 shadow-md rounded-tl-lg rounded-br-lg"
+							class="bg-blue-500 md:bg-red-400 hover:bg-blue-700 text-white font-bold px-4 py-2 shadow-md rounded-tl-lg rounded-br-lg"
 						>
 							Lihat PortFolio
 						</button>
@@ -155,7 +160,7 @@
 					</div>
 					<div class="px-2 py-4">
 						<button
-							class="bg-blue-500 md:bg-red-500 hover:bg-blue-700 text-white font-bold px-4 py-2 shadow-md rounded-tl-lg rounded-br-lg"
+							class="bg-blue-500 md:bg-red-400 hover:bg-blue-700 text-white font-bold px-4 py-2 shadow-md rounded-tl-lg rounded-br-lg"
 						>
 							Lihat PortFolio
 						</button>
@@ -163,12 +168,153 @@
 				</div>
 			</div>
 		</section>
-		<section id="skill" class="w-screen mx-auto py-4 bg-white h-32">Framework Skill</section>
-		<section
-			id="recent"
-			class="w-screen mx-auto py-4 bg-gray-300 h-32 text-indigo-900 lg:text-green-700"
-		>
-			Recent Work
+		<section id="skill" class="w-screen mx-auto py-4 bg-white px-4">
+			<div class="flex flex-wrap items-center">
+				<div class="w-full md:w-4/12 ml-auto mr-auto px-4 mb-4 md:mb-0">
+					<!-- img source: unsplash.com, Jess Bailey -->
+					<img
+						src="../src/assets/keyboard-jessbailey-unsplash.jpg"
+						class="max-w-full rounded-lg shadow-lg"
+						alt="Works"
+					/>
+				</div>
+				<div class="w-full md:w-5/12 ml-auto mr-auto px-4 mb-3">
+					<div class="md:pr-12">
+						<h1 class="w-full my-2 text-5xl font-bold text-center text-gray-700">
+							Skill Framework
+						</h1>
+						<div class="mb-4">
+							<div
+								class="h-1 mx-auto bg-pink-500 w-2/3 opacity-75 my-0 rounded"
+							></div>
+						</div>
+						<p class="mt-4 text-lg text-gray-600">
+							Berikut adalah item dan skala keahlian untuk framework:
+						</p>
+						<ul class="list-none mt-4 text-gray-600">
+							<li class="grid grid-cols-2 py-2">
+								<p class="text-lg">Codeigniter</p>
+								<div class="gradient-skill w-7/8"></div>
+							</li>
+							<li class="grid grid-cols-2 py-2">
+								<p class="text-lg">Laravel</p>
+								<div class="gradient-skill w-3/4"></div>
+							</li>
+							<li class="grid grid-cols-2 py-2">
+								<p class="text-lg">Bootstrap</p>
+								<div class="gradient-skill w-2/3"></div>
+							</li>
+							<li class="grid grid-cols-2 py-2">
+								<p class="text-lg">Tailwindcss</p>
+								<div class="gradient-skill w-1/2"></div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="recent" class="w-screen mx-auto py-8 px-8 bg-white">
+			<div class="text-center mb-8">
+				<h1 class="w-full my-2 text-5xl font-bold text-gray-700">My Recent Work</h1>
+				<div class="mb-4">
+					<div
+						class="h-1 mx-auto bg-pink-500 w-2/3 md:w-1/4 opacity-75 my-0 py-0 rounded"
+					></div>
+				</div>
+				<p class="text-lg m-4 text-gray-600">Berikut adalah pekerjaan terbaru saya:</p>
+			</div>
+			<div class="bg-white grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 m-8">
+				<div class="px-4 py-4 m-2 shadow-lg rounded text-center">
+					<!-- img source: unsplash.com, Clément Hélardot -->
+					<img
+						src="../src/assets/laptop-clemhlrdt-unsplash.jpg"
+						class="w-full rounded-lg"
+						alt="SI Penelitian"
+					/>
+					<div class="px-2 py-2">
+						<p class="font-bold text-xl mb-2 text-gray-700">
+							Sistem Informasi Penelitian
+						</p>
+						<p class="text-gray-700 text-base">
+							Sistem Informasi penelitian untuk dosen dan mahasiswa di University XX
+						</p>
+					</div>
+					<div class="px-2 py-4">
+						<button
+							class="bg-blue-500 hover:bg-blue-700 text-white font-bold px-4 py-2 shadow-md rounded-tr-lg rounded-bl-lg"
+						>
+							Detail
+						</button>
+					</div>
+				</div>
+				<div class="px-4 py-4 m-2 shadow-lg rounded text-center">
+					<!-- img source: unsplash.com, Nordwood Themes -->
+					<img
+						src="../src/assets/laptop-nordwood-unsplash.jpg"
+						class="w-full rounded-lg"
+						alt="SI Perpustakaan"
+					/>
+					<div class="px-2 py-2">
+						<p class="font-bold text-xl mb-2 text-gray-700">
+							Sistem Informasi Perpustakaan
+						</p>
+						<p class="text-gray-700 text-base">
+							Sistem Informasi Perpustakaan untuk Perpustakaan Kota ABC
+						</p>
+					</div>
+					<div class="px-2 py-4 text-center">
+						<button
+							class="bg-blue-500 hover:bg-blue-700 text-white font-bold px-4 py-2 shadow-md rounded-tr-lg rounded-bl-lg"
+						>
+							Detail
+						</button>
+					</div>
+				</div>
+				<div class="px-4 py-4 m-2 shadow-lg rounded">
+					<!-- img source: unsplash.com, Jess Bailey -->
+					<img
+						src="../src/assets/keyboard-jessbailey-unsplash.jpg"
+						class="w-full rounded-lg"
+						alt="SI Keuangan"
+					/>
+					<div class="px-2 py-2">
+						<p class="font-bold text-xl mb-2 text-gray-700">
+							Sistem Informasi Keuangan
+						</p>
+						<p class="text-gray-700 text-base">
+							Sistem Informasi Keuangan untuk Perusahaan ABC
+						</p>
+					</div>
+					<div class="px-2 py-4 text-center">
+						<button
+							class="bg-blue-500 hover:bg-blue-700 text-white font-bold px-4 py-2 shadow-md rounded-tr-lg rounded-bl-lg"
+						>
+							Detail
+						</button>
+					</div>
+				</div>
+				<div class="px-4 py-4 m-2 shadow-lg rounded">
+					<!-- img source: unsplash.com, Clément Hélardot -->
+					<img
+						src="../src/assets/laptop-clemhlrdt-unsplash.jpg"
+						class="w-full rounded-lg"
+						alt="SI Asset"
+					/>
+					<div class="px-2 py-2">
+						<p class="font-bold text-xl mb-2 text-gray-700">Sistem Informasi Asset</p>
+						<p class="text-gray-700 text-base">
+							Sistem Informasi Asset untuk Laboratorium ABC
+						</p>
+					</div>
+					<div class="px-2 py-4 text-center">
+						<button
+							class="bg-blue-500 hover:bg-blue-700 text-white font-bold px-4 py-2 shadow-md rounded-tr-lg rounded-bl-lg"
+						>
+							Detail
+						</button>
+					</div>
+				</div>
+			</div>
 		</section>
 		<section id="contact" class="w-screen mx-auto py-4 bg-indigo-700 h-32">Contact Me</section>
 		<footer class="w-screen mx-auto py-4 bg-white h-32">Footer</footer>
