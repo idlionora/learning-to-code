@@ -11,11 +11,14 @@
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" />
 		<link rel="stylesheet" href="style.css" />
 		<style>
-			.section-gradient {
+			.gradient-aboutme {
 				background-image: linear-gradient(to bottom right, #4c51bf, #702459);
 			}
 			.gradient-skill {
 				background-image: linear-gradient(#fc8181, #fed7d7);
+			}
+			.gradient-bottom {
+				background-image: linear-gradient(#4c51bf, #702459);
 			}
 		</style>
 	</head>
@@ -52,14 +55,14 @@
 							>About Me</a
 						>
 						<a
-							href="#recent"
-							class="block mt-4 lg:inline-block lg:mt-0 text-gray-600 hover:text-gray-900 text-lg mr-4"
-							>Recent Work</a
-						>
-						<a
 							href="#skill"
 							class="block mt-4 lg:inline-block lg:mt-0 text-gray-600 hover:text-gray-900 text-lg mr-4"
 							>Framework Skill</a
+						>
+						<a
+							href="#recent"
+							class="block mt-4 lg:inline-block lg:mt-0 text-gray-600 hover:text-gray-900 text-lg mr-4"
+							>Recent Work</a
 						>
 						<a
 							href="#contact"
@@ -70,14 +73,14 @@
 				</div>
 				<div>
 					<a
-						href="#"
+						href="#contact"
 						class="inline-block text-sm px-4 py-2 rounded text-gray-600 border border-gray-600 hover:border-transparent hover:text-white hover:bg-indigo-700 mt-4 lg:mt-0"
-						>Button 1</a
+						>Contact me</a
 					>
 				</div>
 			</nav>
 		</section>
-		<section id="about" class="w-screen mx-auto py-4 bg-indigo-700 section-gradient">
+		<section id="about" class="w-screen mx-auto py-4 bg-indigo-700 gradient-aboutme">
 			<div class="px-16 py-8 text-white">
 				<h1 class="w-full text-5xl font-bold text-center">About Me</h1>
 				<div class="mb-4">
@@ -316,7 +319,48 @@
 				</div>
 			</div>
 		</section>
-		<section id="contact" class="w-screen mx-auto py-4 bg-indigo-700 h-32">Contact Me</section>
-		<footer class="w-screen mx-auto py-4 bg-white h-32">Footer</footer>
+		<section id="contact" class="w-screen mx-auto py-4 gradient-bottom">
+			<h1 class="w-full my-2 text-5xl font-bold text-center text-white">Contact me</h1>
+			<div class="mb-4">
+				<div class="h-1 mx-auto bg-pink-500 w-1/4 opacity-75 my-0 py-0 rounded"></div>
+			</div>
+			<div class="container p-4 mb-6 w-full lg:w-1/2 shadow-lg rounded-lg bg-gray-200 mx-auto">
+				<form class="p-5 lg:p-10 text-center">
+					<h4 class="text-2xl font-semibold">Ingin menghubungi saya?</h4>
+					<p class="mt-1 mb-4 text-gray-600">Tolong kirimkan pesan.</p>
+					<div class="w-full mb-4 mt-8">
+						<label for="name" class="uppercase text-gray-600 text-xs font-bold">Nama Lengkap</label>
+						<input id="name" type="text" class="mt-2 px-3 py-3 placeholder-gray-500 text-gray-600 bg-white rounded text-sm shadow w-full" placeholder="Nama Lengkap">
+					</div>
+					<div class="w-full mb-4 mt-4">
+						<label for="email" class="uppercase text-gray-600 text-xs font-bold">Email</label>
+						<input id="email" type="email" class="mt-2 px-3 py-3 placeholder-gray-500 text-gray-600 bg-white rounded text-sm shadow w-full" placeholder="Email">
+					</div>
+					<div class="w-full mb-4 mt-4">
+						<label for="message" class="uppercase text-gray-600 text-xs font-bold">Pesan</label>
+						<textarea id="message" cols="80" rows="4" class="mt-2 px-3 py-3 placeholder-gray-500 text-gray-600 bg-white rounded text-sm shadow w-full" placeholder="Tuliskan pesan ..."></textarea>
+					</div>
+					<div class="mt-6">
+						<button class="bg-indigo-700 text-white text-sm font-bold uppercase px-6 py-3 rounded shadow hover:bg-indigo-900 hover:shadow-lg">Kirim pesan</button>
+					</div>
+				</form>
+			</div>
+		</section>
+		<footer class="w-screen mx-auto py-4 bg-white mt-8 mb-8">
+			<div class="text-center">
+				<a href="#" class="text-indigo-700 hover:text-indigo-900 p-2">
+					<i class="fa-2x fab fa-facebook"></i>
+				</a>
+				<a href="#" class="text-indigo-700 hover:text-indigo-900 p-2">
+					<i class="fa-2x fab fa-twitter"></i>
+				</a>
+				<a href="#" class="text-indigo-700 hover:text-indigo-900 p-2">
+					<i class="fa-2x fab fa-instagram"></i>
+				</a>
+			</div>
+			<div class="text-center mt-4 text-gray-600">
+				Design with Tailwindcss
+			</div>
+		</footer>
 	</body>
 </html>
