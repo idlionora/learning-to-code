@@ -9,5 +9,6 @@ $message = match ($status) {
 };
 // match is like switch statement, but without break
 // match uses strict comparison
+// match statement is introduced in php 8.0
 
 echo $message . "\n";
